@@ -14,8 +14,8 @@ class FightForNetNeutrality
 
   def call(env)
     req = Rack::Request.new(env)
-    ooo_ua = (env["HTTP_X_FIREWALL"] || "").include? "OpenOffice"
-    if @ips_banned.any? {|ips| ips.include? req.ip } || ooo_ua
+    ooo = (env["HTTP_X_FIREWALL"] || "").include? "OpenOffice"
+    if @ips_banned.any? {|ips| ips.include? req.ip } || ooo
       [403, {"Content-Type" => "text/html; charset=utf8"}, [@html]]
     else
       @app.call(env)

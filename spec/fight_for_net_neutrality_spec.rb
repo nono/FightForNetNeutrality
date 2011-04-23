@@ -26,4 +26,10 @@ describe FightForNetNeutrality do
     res.status.must_equal 403
     res.body.must_include "Ressource inaccessible"
   end
+
+  it "blocks OpenOffice.org firewall" do
+    res = req.get("/", "REMOTE_ADDR" => "127.0.0.2", "HTTP_X_FIREWALL" => "OpenOffice.org")
+    res.status.must_equal 403
+    res.body.must_include "Ressource inaccessible"
+  end
 end

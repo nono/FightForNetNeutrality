@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name             = "fight-for-net-neutrality"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.date             = Time.now.utc.strftime("%Y-%m-%d")
   s.homepage         = "http://github.com/nono/FightForNetNeutrality"
   s.authors          = "Bruno Michel"
