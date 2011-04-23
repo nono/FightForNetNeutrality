@@ -20,10 +20,8 @@ class FightForNetNeutrality
       @app.call(env)
     end
   end
-end
 
-
-HTML = <<-EOS
+  HTML = <<-EOS
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -61,3 +59,5 @@ basiquement à s'attaquer à la liberté d'expression du peuple et devrait
 </body>
 </html>
 EOS
+
+end
